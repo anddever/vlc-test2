@@ -511,7 +511,7 @@ jboolean Java_org_videolan_vlc_LibVLC_takeSnapShot(JNIEnv *env, jobject thiz,jin
 {  
     jboolean isCopy;  
    vlcjni_object *p_obj = VLCJniObject_getInstance(env, thiz);
-   libvlc_media_player_t *mp = gp_obj->u.p_mp; 
+   libvlc_media_player_t *mp = p_obj->u.p_mp; 
    /*libvlc_media_player_t *mp = getMediaPlayer(env, thiz); */
      /* Get C string */  
    const char* psz_path = (*env)->GetStringUTFChars(env, path, &isCopy);  
